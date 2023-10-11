@@ -1,10 +1,10 @@
-let wheel = document.getElementById('wheel');
 let spinning = false;
 
 function spinWheel() {
     if (!spinning) {
         spinning = true;
-        let deg = Math.floor(Math.random() * 360) + 720;
+        let wheel = document.getElementById('wheel');
+        let deg = Math.floor(Math.random() * 360) + 1080;
         wheel.style.transition = 'transform 3s ease-out';
         wheel.style.transform = `rotate(${deg}deg)`;
 
@@ -23,3 +23,4 @@ function getSegment(degrees) {
     let segmentIndex = Math.floor((degrees % 360) / segmentSize);
     return segments[segmentIndex];
 }
+
